@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!DOCTYPE package-info SYSTEM "http://www.elkarte.net/site/package-info">
+<package-info xmlns="http://www.elkarte.net/site/package-info" xmlns:elk="http://www.elkarte.net/">
+
+	<id>inter:html5videoaudiobbc</id>
+	<name>HTML5 Video Audio BBC</name>
+	<version>0.1.0</version>
+	<type>modification</type>
+	<install for="1.0.3 - 1.0.99">
+		<readme type="inline">This will install HTML5 video and audio bbcode addon for ElkArte 1.0.x</readme>
+		<require-file name="HTML5VideoAudioBBC.integrate.php" destination="SUBSDIR" />
+		<require-file name="HTML5VideoAudioBBCButton.js" destination="THEMEDIR/scripts" />
+        <require-file name="languages/HTML5VideoAudioBBC.english.php" destination="LANGUAGEDIR/english" />
+        <require-file name="languages/HTML5VideoAudioBBC.russian.php" destination="LANGUAGEDIR/russian" />
+        <!--
+        <require-file name="html5video.png" destination="IMAGESDIR/bbc" />
+        <require-file name="html5audio.png" destination="IMAGESDIR/bbc" />
+        -->
+		<hook hook="integrate_bbc_codes" file="SUBSDIR/HTML5VideoAudioBBC.integrate.php" function="HTML5VideoAudioBBC::integrate_bbc_codes" />
+		<hook hook="integrate_bbc_buttons" file="SUBSDIR/HTML5VideoAudioBBC.integrate.php" function="HTML5VideoAudioBBC::integrate_bbc_buttons" />
+
+		<redirect url="?action=admin;area=packages;sa=browse" timeout="750" />
+	</install>
+	
+	<uninstall for="1.0.3 - 1.0.99">
+	<readme type="inline">This will uninstall HTML5 video and audio bbcode addon for ElkArte 1.0.x</readme>
+		<remove-file name="SUBSDIR/HTML5VideoAudioBBC.integrate.php" />
+        <remove-file name="THEMEDIR/scripts/HTML5VideoAudioBBCButton.js" />
+        <remove-file name="LANGUAGEDIR/english/HTML5VideoAudioBBC.english.php" />
+        <remove-file name="LANGUAGEDIR/russian/HTML5VideoAudioBBC.russian.php" />
+        <!--
+        <remove-file name="IMAGESDIR/bbc/html5video.png" />
+        <remove-file name="IMAGESDIR/bbc/html5audio.png" />
+        -->
+		<hook reverse="true" hook="integrate_bbc_codes" file="SUBSDIR/HTML5VideoAudioBBC.integrate.php" function="HTML5VideoAudioBBC::integrate_bbc_codes" />
+		<hook reverse="true" hook="integrate_bbc_buttons" file="SUBSDIR/HTML5VideoAudioBBC.integrate.php" function="HTML5VideoAudioBBC::integrate_bbc_buttons" />
+
+		<redirect url="?action=admin;area=packages;sa=browse" timeout="750" />
+	</uninstall>
+</package-info>
