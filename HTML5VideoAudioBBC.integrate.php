@@ -72,9 +72,9 @@ class HTML5VideoAudioBBC
                     $data = \'src="\' . $data . \'" type="\' . $type . \'"\';
                 }
 
-                # <video width="320" height="240" controls>
+                # width="320" height="240"
                 $data = \'
-<video controls>
+<video width="560" height="315"  controls>
     <source \' . $data . \'>
     \' . sprintf($txt[\'html5videobbc_not_support\'], $link) . \'<br>
 </video>\';
