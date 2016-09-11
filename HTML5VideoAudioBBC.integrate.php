@@ -47,6 +47,7 @@ class HTML5VideoAudioBBC
                     $type = HTML5VideoAudioBBC::getHtml5MediaType($data, "audio");
                     $data = \'src="\' . $data . \'" type="\' . $type . \'"\';
                 }
+
                 $data = \'
 <audio controls>
     <source \' . $data . \'>
@@ -105,7 +106,7 @@ class HTML5VideoAudioBBC
         // $bbc_tags['row2'][0] = elk_array_insert($where, 'html5video', array('html5audio'), 'after', false);
 
         // Add the javascript, this tells the editor what to do with the new button
-        loadJavascriptFile('HTML5VideoAudioBBCButton.js', [], 'HTML5VideoAudioBBCButton');
+        loadJavascriptFile('html5videoaudiobbc.js');
     }
 
     static public function getHtml5MediaType($data, $av)
