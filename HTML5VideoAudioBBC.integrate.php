@@ -13,7 +13,7 @@ class HTML5VideoAudioBBC
         global $modSettings;
 
         loadLanguage('HTML5VideoAudioBBC');
-        
+
         // Only for when bbc is on
         if (empty($modSettings['enableBBC'])) {
             return;
@@ -100,12 +100,7 @@ class HTML5VideoAudioBBC
         $where = $bbc_tags['row2'][3];
         // And here we insert the new value after code
         $bbc_tags['row2'][3] = elk_array_insert($where, 'html5video', array('html5audio'), 'after', false);
-        //$where = $bbc_tags['row2'][5];
-        //$bbc_tags['row2'][5] = elk_array_insert($where, 'html5video', array('html5audio'), 'after', false);
-        //echo '<pre>', print_r( $bbc_tags['row2'], 1), '</pre>';
-        // $bbc_tags['row2'][0] = elk_array_insert($where, 'html5video', array('html5audio'), 'after', false);
 
-        // Add the javascript, this tells the editor what to do with the new button
         loadJavascriptFile('html5videoaudiobbc.js');
     }
 
