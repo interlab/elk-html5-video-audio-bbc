@@ -15,8 +15,11 @@
 [html5video]http://your-url.ogg[/html5video]
 ```
 
-## Icons license
-icons by Nick Roach  http://www.elegantthemes.com/ License: GPL
-
 ## ElkArte site
 [Support and comments for this mod](http://www.elkarte.net/community/index.php?topic=3976.0)
+
+## License
+MIT
+
+## Icons license
+icons by Nick Roach  http://www.elegantthemes.com/ License: GPL
