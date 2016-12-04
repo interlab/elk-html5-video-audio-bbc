@@ -4,7 +4,7 @@
 
     <id>inter:html5videoaudiobbc</id>
     <name>HTML5 Video Audio BBC</name>
-    <version>0.3.0</version>
+    <version>0.3.1</version>
     <type>modification</type>
     <install for="1.0.3 - 1.0.99">
         <readme type="inline">This will install HTML5 video and audio bbcode addon for ElkArte 1.0.x</readme>
