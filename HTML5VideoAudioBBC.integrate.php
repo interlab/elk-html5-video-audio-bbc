@@ -68,7 +68,7 @@ class HTML5VideoAudioBBC
 
                 if (empty($data))
                     $data = \'[html5video]\' . $data . \'[/html5video]\';
-                elseif (!in_array(strrchr($data, \'.\'), [\'.mp4\', \'.webm\', \'.ogg\']))
+                elseif (!in_array(strrchr($data, \'.\'), [\'.mp4\', \'.webm\', \'.ogg\', \'.ogv\']))
                     $data = \'[html5video]\' . $data . \'[/html5video]\';
                 else {
                     $type = HTML5VideoAudioBBC::getHtml5MediaType($data, \'video\');
@@ -125,6 +125,8 @@ class HTML5VideoAudioBBC
             elseif ('.webm' === $ext)
                 return 'video/webm';
             elseif ('.ogg' === $ext)
+                return 'video/ogg';
+            elseif ('.ogv' === $ext)
                 return 'video/ogg';
             else
                 return 'text/plain';
