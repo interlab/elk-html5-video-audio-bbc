@@ -4,7 +4,7 @@
 
     <id>inter:html5videoaudiobbc</id>
     <name>HTML5 Video Audio BBC</name>
-    <version>0.3.1</version>
+    <version>0.3.3</version>
     <type>modification</type>
     <install for="1.0.3 - 1.0.99">
         <readme type="inline">This will install HTML5 video and audio bbcode addon for ElkArte 1.0.x</readme>
@@ -13,6 +13,7 @@
         <require-file name="html5videoaudiobbc.css" destination="THEMEDIR/css" />
         <require-file name="languages/HTML5VideoAudioBBC.english.php" destination="LANGUAGEDIR/english" />
         <require-file name="languages/HTML5VideoAudioBBC.russian.php" destination="LANGUAGEDIR/russian" />
+        <require-file name="languages/HTML5VideoAudioBBC.french.php" destination="LANGUAGEDIR/french" />
         <require-file name="html5video.png" destination="IMAGESDIR/bbc" />
         <require-file name="html5audio.png" destination="IMAGESDIR/bbc" />
 
@@ -30,6 +31,7 @@
         <remove-file name="THEMEDIR/css/html5videoaudiobbc.css" />
         <remove-file name="LANGUAGEDIR/english/HTML5VideoAudioBBC.english.php" />
         <remove-file name="LANGUAGEDIR/russian/HTML5VideoAudioBBC.russian.php" />
+        <remove-file name="LANGUAGEDIR/french/HTML5VideoAudioBBC.french.php" />
         <remove-file name="IMAGESDIR/bbc/html5video.png" />
         <remove-file name="IMAGESDIR/bbc/html5audio.png" />
 

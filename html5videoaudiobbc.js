@@ -9,4 +9,3 @@ $.sceditor.command
 		tooltip: "HTML5Audio"
 	}
 );
-
