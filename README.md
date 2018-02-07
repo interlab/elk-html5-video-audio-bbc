@@ -12,7 +12,6 @@
 ```
 [html5video]http://your-url.mp4[/html5video]
 [html5video]http://your-url.webm[/html5video]
-[html5video]http://your-url.ogg[/html5video]
 [html5video]http://your-url.ogv[/html5video]
 ```
 

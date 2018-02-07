@@ -41,7 +41,7 @@ class HTML5VideoAudioBBC
 
                 if (empty($data))
                     $data = \'[html5audio]\' . $data . \'[/html5audio]\';
-                elseif (!in_array(strrchr($data, "."), [\'.mp3\', \'.ogg\']))
+                elseif (!in_array(strrchr($data, "."), [\'.mp3\', \'.ogg\', \'.wav\']))
                     $data = \'[html5audio]\' . $data . \'[/html5audio]\';
                 else {
                     $type = HTML5VideoAudioBBC::getHtml5MediaType($data, "audio");
