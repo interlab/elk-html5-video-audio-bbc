@@ -88,7 +88,7 @@ class HTML5VideoAudioBBC
 
         $where = $bbc_tags['row2'][3];
         // And here we insert the new value after code
-        $bbc_tags['row2'][3] = elk_array_insert($where, 'image', array('html5video'), 'after', false);
+        $bbc_tags['row2'][3] = elk_array_insert($where, 'link', array('html5video'), 'after', false);
 
         $where = $bbc_tags['row2'][3];
         // And here we insert the new value after code
