@@ -10,13 +10,7 @@ class HTML5VideoAudioBBC
     // hook integrate_additional_bbc /sources/subs/BBC/ParserWrapper.php
     static public function integrate_additional_bbc(&$additional_bbc)
     {
-        global $modSettings;
-
         loadLanguage('HTML5VideoAudioBBC');
-
-        if (empty($modSettings['enableBBC'])) {
-            return;
-        }
 
         $additional_bbc[] = [
             BBC\Codes::ATTR_TAG => 'html5audio',
@@ -79,11 +73,11 @@ class HTML5VideoAudioBBC
 
         $where = $bbc_tags['row2'][3];
         // And here we insert the new value after code
-        $bbc_tags['row2'][3] = elk_array_insert($where, 'image', array('html5video'), 'after', false);
+        $bbc_tags['row2'][3] = elk_array_insert($where, 'image', ['html5video'], 'after', false);
 
         $where = $bbc_tags['row2'][3];
         // And here we insert the new value after code
-        $bbc_tags['row2'][3] = elk_array_insert($where, 'html5video', array('html5audio'), 'after', false);
+        $bbc_tags['row2'][3] = elk_array_insert($where, 'html5video', ['html5audio'], 'after', false);
 
         loadJavascriptFile('html5videoaudiobbc.js');
     }
